@@ -3,8 +3,10 @@ package DAO;
 import Entities.Categorie;
 import Entities.Produit;
 
+import javax.ejb.Local;
 import java.util.List;
 
+@Local
 public interface IProduit{
 
     public List<Produit> findAll();
