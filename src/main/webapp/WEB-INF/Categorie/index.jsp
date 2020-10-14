@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page isELIgnored = "false" contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -35,7 +36,7 @@
 <br/>
 <br/>
 <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-    <div class="row center">
+    <div class="row">
         <div class="card text-center col-10">
             <div class="card-header">
                 Gestion des Categories
@@ -58,13 +59,14 @@
                         </table>
                     </div>
                     <div class="col-6">
-                        <form>
+                        <form method="post" action="${pageContext.request.contextPath}/categorie" id="frm">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Libelle</label>
-                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Libelle...">
+                                    <input type="text" class="form-control" name="libelle" id="inputEmail4" placeholder="Libelle...">
                                 </div>
                             </div>
+                            <input type="hidden" name="action" value="add">
                             <button type="submit" class="btn btn-primary">Enregistrer</button>
                         </form>
                     </div>
