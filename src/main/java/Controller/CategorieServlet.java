@@ -14,6 +14,7 @@ public class CategorieServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            response.getWriter().println("Bonjour Java EE Servlet");
+            getServletContext().getRequestDispatcher("/WEB-INF/Categorie/index.jsp").forward(request, response);
+            //response.getWriter().println("okey");
     }
 }
