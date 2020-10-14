@@ -12,7 +12,8 @@ public interface IProduit{
     public List<Produit> findAll();
     public int add(Produit p);
     public Produit findById(int id);
-    public List<Produit> findByCategorie(Categorie c);
+    public Produit findByProduit(Produit p);
+    public List<Produit> findByIdCategorie(int id);
     public void edit(Produit p);
     public void delete(Produit p);
 

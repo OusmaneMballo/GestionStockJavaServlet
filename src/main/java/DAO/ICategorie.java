@@ -9,7 +9,8 @@ import java.util.List;
 public interface ICategorie{
     public List<Categorie> findAll();
     public int add(Categorie c);
-    public Categorie findByIdCategorie();
+    public Categorie findByCategorie(Categorie c);
+    public Categorie findById(int id);
     public void edit(Categorie c);
     public void delete(Categorie c);
 }
